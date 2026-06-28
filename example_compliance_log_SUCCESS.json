@@ -1,0 +1,50 @@
+{
+  "RunId": "a3f92b1c-4d8e-4f1a-9c3b-2e7d5f0a1b4c",
+  "Timestamp": "2025-01-15T09:32:11.4420000Z",
+  "Status": "SUCCESS",
+  "StatusDetail": "All onboarding steps completed within SLA window. Audit trail sealed.",
+  "InputPayload": {
+    "ContractorName": "John Doe",
+    "Role": "Junior Cloud Support",
+    "Department": "Global Delivery",
+    "AccessLevel": "Tier-1",
+    "ContractDurationMonths": "6"
+  },
+  "ProvisionedProfile": {
+    "ContractorId": 1,
+    "ContractorName": "John Doe",
+    "CorporateEmail": "john.doe@corp.internal",
+    "Role": "Junior Cloud Support",
+    "Department": "Global Delivery",
+    "AccessLevel": "Tier-1",
+    "SystemGroups": "GRP_ReadOnly_Monitoring,GRP_ServiceDesk_Basic,GRP_VPN_Standard",
+    "SoftwareLicenses": "Microsoft365_Basic,Monitoring_Dashboard_ReadOnly,Slack_Standard",
+    "AssignedAssetId": 1,
+    "ContractExpiry": "2025-07-15",
+    "OnboardedAt": "2025-01-15T09:32:11.4420000Z"
+  },
+  "AssignedAsset": {
+    "AssetId": 1,
+    "AssetTag": "ASSET-V001",
+    "AssetType": "Virtual Laptop",
+    "Model": "Dell Latitude 5540 (VDI)",
+    "Status": "Available",
+    "LicenseKey": "N/A"
+  },
+  "AuditSteps": [
+    "2025-01-15T09:32:11.4010000Z | STEP_1: Validating input payload...",
+    "2025-01-15T09:32:11.4020000Z | STEP_1: PASSED — Role=Junior Cloud Support, AccessLevel=Tier-1",
+    "2025-01-15T09:32:11.4180000Z | STEP_2: Scanning asset inventory for available hardware/license...",
+    "2025-01-15T09:32:11.4250000Z | STEP_2: Asset located — Tag=ASSET-V001, Model=Dell Latitude 5540 (VDI)",
+    "2025-01-15T09:32:11.4280000Z | STEP_3: Reserving asset ASSET-V001 (AssetId=1)...",
+    "2025-01-15T09:32:11.4340000Z | STEP_3: Asset ASSET-V001 successfully reserved and marked Assigned.",
+    "2025-01-15T09:32:11.4350000Z | STEP_4: Building corporate profile and provisioning accounts...",
+    "2025-01-15T09:32:11.4360000Z | STEP_4: Corporate email generated: john.doe@corp.internal",
+    "2025-01-15T09:32:11.4370000Z | STEP_4: System groups assigned: GRP_ReadOnly_Monitoring,GRP_ServiceDesk_Basic,GRP_VPN_Standard",
+    "2025-01-15T09:32:11.4380000Z | STEP_4: Software licenses provisioned: Microsoft365_Basic,Monitoring_Dashboard_ReadOnly,Slack_Standard",
+    "2025-01-15T09:32:11.4390000Z | STEP_5: Writing contractor record to database...",
+    "2025-01-15T09:32:11.4410000Z | STEP_5: Contractor profile created — ContractorId=1",
+    "2025-01-15T09:32:11.4420000Z | STEP_6: Sealing compliance artifact. Onboarding complete."
+  ],
+  "FailureReason": null
+}
